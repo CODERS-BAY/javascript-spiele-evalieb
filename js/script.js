@@ -11,18 +11,23 @@ let planet = document.getElementById("planet");
 function setBG() {
   let backgroundField = document.getElementsByTagName('fieldset')[0];
 
-  if (planet == "erde") {
+  if (planet == "Erde") {
     backgroundField.style.backgroundColor = "rgba(109, 203, 231, 0.5)";
   }
-  if (planet == "mond") {
+  if (planet == "Mond") {
     backgroundField.style.backgroundColor = "rgba(247, 202, 64, 0.5)";
   }
-  if (planet == "mars") {
+  if (planet == "Mars") {
     backgroundField.style.backgroundColor = "rgba(216, 61, 40, 0.5)";
   }
-  if (planet == "jupiter") {
+  if (planet == "Jupiter") {
     backgroundField.style.backgroundColor = "rgba(213, 147, 115, 0.5)";
   }
+
+  plToChose.classList.add("hidden");
+  chosenPl.classList.remove("hidden");
+  chosenPl.innerHTML = planet;
+
 }
 
 
@@ -30,7 +35,13 @@ function setBG() {
 function playTheGame() {
   implementKlickCount();
   let tryings = document.getElementById('trying').value;
+  trying.classList.add("hidden");
+  versuche.innerHTML = tryings;
   console.log(tryings);
+  versucheGesamt.innerHTML = "Versuche gesamt:";
+  tryingsLeft.classList.remove("firstHidden");
+  tryLeft.innerHTML = tryings- localStorage.clickcount;
+
   //der user hat soviele versuche wie er oben eingibt
   //nach jedem versuch - also bei jedem Klick wird der Counter um eins hochgestellt.
   //Aber die Variable "distanceToMonster" muss gleich bleiben.
@@ -47,7 +58,6 @@ function playTheGame() {
     if (planet == "jupiter") {
       fallingSpeed = 24.79;
     }
-
     //click counter. Hier wird gezählt, wie oft geklickt wird
 
     let counter = localStorage.clickcount - 1;
@@ -74,6 +84,8 @@ function playTheGame() {
       won.innerHTML = "Gratuliere! <br> Sie haben das Monster Getroffen";
       let button = document.getElementById("los");
       button.style.visibility = "hidden";
+      document.getElementById('playAgain').innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
+
 
       
     } else {
@@ -106,7 +118,7 @@ function playTheGame() {
     document.getElementById("winner").innerHTML =
       daneben + "m entfernt!";
 
-    document.getElementById('playAgain').innerHTML = '<button id="again" onclick="playAgain()">Nachmal Spielen </button>';
+    document.getElementById('playAgain').innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
     }
 }
 

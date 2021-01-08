@@ -1,5 +1,6 @@
 //whow many guesses do you want to have?
 let counter = document.getElementById('counter').value;
+
 //generate the 3-digit numner
 let firstDigi = Math.floor(Math.random()*9 + 1 );
 let secoundDigi = Math.floor(Math.random()*9 + 1);
@@ -16,6 +17,8 @@ let thirdDigiHit = false;
 let round = 0; 
 
 function guessThe3DigiNumber(){
+    tryings.innerHTML = counter;
+
     if(counter > 1 && counter <= 12){
         //dann kann gespielt werden
         let number = document.getElementById('guessNumber').value;
@@ -27,6 +30,7 @@ function guessThe3DigiNumber(){
             console.log('die Zahl: ' + firstNumber + secoundNumber + thirdNumber);
             let exactHits = 0; 
             let hits = 0; 
+            spielstand.classList.add("hidden");
 
             //compare
             if(firstDigi == firstNumber){
@@ -62,13 +66,17 @@ function guessThe3DigiNumber(){
               fieldset.style.backgroundColor = "rgba(164, 119, 96, 0.6)";
               let button = document.getElementById('button');
               button.classList.add('firstHidden');
+              button2.classList.remove('firstHidden');
+              button2.innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
+              again.style.backgroundColor = "green";
+     
               
             } else {
               let result = document.createElement("div");
               let choice = document.createElement("p");
                 choice.append(
                     round +
-                    ". Runde,  " +
+                    ". Runde:  " +
                     hits +
                     " richtige Zahl(en), " +
                     exactHits +

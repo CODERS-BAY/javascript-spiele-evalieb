@@ -26,33 +26,45 @@ function setTheLimit(){
     button2 = document.getElementById('button2');
     button1.classList.add('firstHidden');
     button2.classList.remove('firstHidden');
-    guessTheNumber();
+    counter--;
 
 }
 
 function guessTheNumber(){
-
-    if(counter > 0){
-    //die zu ratende Nummer, ändert sich jedes mal 
     let guessNumber = document.getElementById('guessNumber').value;
 
+    if(counter > 0){
+
+    //die zu ratende Nummer, ändert sich jedes mal 
     console.log(upperLimit + "uL\n" + numberPC + "NPC\n" + guessNumber + "gN\n" + counter + "Counter" );
-
-        if(numberPC == guessNumber){
-            let win = document.getElementById('spielstand');
-            win.innerHTML = "Du hast Gewonnen!";
-
-        }else if (guessNumber > numberPC){
-            counter--;
-            spielstand.innerHTML = "Zahl zu hoch. Du hast noch " + counter + " Versuche";
-        }else{
-            counter--;
-            spielstand.innerHTML = "Zahl zu niedrig. Du hast noch " + counter + " Versuche";
+        
+        if(guessNumber < numberPC){
+                spielstand.innerHTML = "Zahl zu niedrig. Du hast noch " + counter + " Versuche";
+                counter--;
+        }else if (guessNumber > numberPC){ 
+                spielstand.innerHTML = "Zahl zu hoch. Du hast noch " + counter + " Versuche";
+                counter--;
+        } else {
+                let win = document.getElementById('spielstand');
+                win.innerHTML = "Du hast Gewonnen!";
+                button2.innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
+                again.style.backgroundColor = "red";
         }
-    }else{
+    }else if ((counter == 0) && (numberPC == guessNumber)){
+         let win = document.getElementById('spielstand');
+         win.innerHTML = "Du hast Gewonnen!";
+         button2.innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
+         again.style.backgroundColor = "green";
+    }else {
+        //if counter is 0 und numberPC ist not guessNumber
         spielstand.innerHTML = "LEIDER VERLOREN";
+        button2.innerHTML = '<button id="again" onclick="playAgain()">Nochmal Spielen </button>';
+        again.style.backgroundColor = "red";
     }
-
-
 }
+
+function playAgain(){
+    location.reload();
+  }
+  
 

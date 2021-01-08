@@ -30,12 +30,15 @@
                     <label for="planet">Planet:</label>
                 </div>
                 <div class="col-6 flex-start">
-                    <select id="planet">
-                        <link href="index.html"><option value="erde">Erde</option></link>
-                        <link href="index.html"><option value="mars">Mars</option></link>
-                        <option value="mond">Mond</option>
-                        <option value="jupiter">Jupiter</option>
-                    </select>
+                    <div id="plToChose">
+                        <select id="planet">
+                            <option value="Erde">Erde</option></link>
+                            <option value="Mars">Mars</option></link>
+                            <option value="Mond">Mond</option>
+                            <option value="Jupiter">Jupiter</option>
+                        </select>
+                    </div>
+                    <div id="chosenPl" class="hidden"></div>
                 </div>
             </div>
             <div class="row">
@@ -56,15 +59,16 @@
             </div>
             <div class="row">
                 <div class="col-6 flex-end">
-                    <label for="versuche">Versuche:</label>
+                    <label id="versucheGesamt" for="versucheGes">Versuche:</label>
                 </div>
                 <div class="col-6 flex-start">
                     <input id="trying" name="trying" type="number" min="1" max="10">
+                    <div id="versuche"></div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 firstHidden">
-                    Sie haben noch <p id="try" name="try"></p> Versuche! 
+                <div class="col-12 firstHidden" id="tryingsLeft">
+                    Sie haben noch &nbsp <div id="tryLeft" name="try"></div> &nbsp Versuche! 
                 </div>
             </div>
             <div class="row" >

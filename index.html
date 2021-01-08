@@ -21,9 +21,9 @@
             </div>
             <div class="row">
                 <div class="col-6 flex-end noChangeA" id="rounds" >
-                    <label for="counter">Wieviele Runden möchtest du maximal Raten?</label>
+                    <label for="counter">Wieviele Runden möchtest du raten?(maximal 12 erlaubt)</label>
                 </div>
-                <div class="col-6 flex-start" id="ct">
+                <div class="col-6 flex-start" id="tryings">
                     <input id="counter" name="counter" type="number" min="1" max="12">
                 </div>
             </div>
@@ -45,7 +45,8 @@
                 <div class="col-12" id="button">
                     <button onclick="guessThe3DigiNumber()">Los geht's!</button>
                 </div>
-            </div>            
+            </div>   
+            <div class="col-12 firstHidden" id="button2"></div>         
             <div class="row">
                 <div class="col-12">
                     <div id="result"></div>
