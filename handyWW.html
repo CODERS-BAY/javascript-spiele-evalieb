@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styleHWW.css">
+        <title>Handyweitwurf - triff das Monster</title>
+
+    </head>
+<body>
+    <div class="container">
+        <fieldset>
+            <legend>Triff das Monster</legend>
+            <div class="row">
+                <div class="col-12">
+                    <header>
+                        <h1>Handy-Weitwurf</h1>    
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                   Geben Sie die gewünschten Daten ein!
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 flex-end">
+                    <label for="planet">Planet:</label>
+                </div>
+                <div class="col-6 flex-start">
+                    <select id="planet">
+                        <link href="index.html"><option value="erde">Erde</option></link>
+                        <link href="index.html"><option value="mars">Mars</option></link>
+                        <option value="mond">Mond</option>
+                        <option value="jupiter">Jupiter</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end">
+                    <label for="angel">Winkel:</label>
+                </div>
+                <div class="col-6 flex-start">
+                     <input id="angle" name="angle" type="number" min="1" max="90" placeholder="1-90">
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end">
+                    <label for="speed">Geschwindigkeit:</label>
+                </div>
+                <div class="col-6 flex-start">
+                    <input id="speed" name="speed" type="number" min="1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end">
+                    <label for="versuche">Versuche:</label>
+                </div>
+                <div class="col-6 flex-start">
+                    <input id="trying" name="trying" type="number" min="1" max="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 firstHidden">
+                    Sie haben noch <p id="try" name="try"></p> Versuche! 
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-12" id="playAgain">
+                    Viel Glück!
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <button id="los" onclick="playTheGame(), setBG()">Los geht's!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="winner"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="result"></div>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+    </div>
+</body>
+</html>
