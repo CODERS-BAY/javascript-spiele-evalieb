@@ -1,21 +1,20 @@
 body {
   background-image: url("../img/sky.jpg");
-  /* font-size: large;
-  max-height: 100vh;*/
+  font-size: large;
+  max-height: 100vh;
   background-position: center; 
 
   /* background-color: antiquewhite; */
 }
 
-/* #cont {
-  /* background-image: url("../img/sspFrontpage.png");
+#cont {
   background-size: 70%;
   background-position: center;
   max-width: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-top: 100px;
-} */
+}
 
 fieldset {
     background-color:  rgba(230, 207, 154, 0.4);;
@@ -23,7 +22,7 @@ fieldset {
 }
 
 #schereSteinPapier {
-  height: 40vh;
+  height: 50vh;
 }
 
 #paper,
@@ -32,8 +31,8 @@ fieldset {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 40%; 
-  max-width: 20%;
+  /* padding: 40%;  */
+  max-width: 40vh;
   transition: width 2s;
 }
 
@@ -62,11 +61,10 @@ button:hover {
 
 #popup{
   background-color:  rgb(230, 207, 154);
-  /* position: absolute;
+  position: absolute;
   margin: 0 auto;
   top: 40%;
-  width: 600px; */
-  /* left: 35%; */
+  width: 600px;
 
 }
 
