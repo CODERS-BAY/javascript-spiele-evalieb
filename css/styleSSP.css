@@ -1,8 +1,8 @@
 body {
   background-image: url("../img/sky.jpg");
-  font-size: large;
-  max-height: 100vh;
-  background-position: center;
+  /* font-size: large;
+  max-height: 100vh;*/
+  background-position: center; 
 
   /* background-color: antiquewhite; */
 }
@@ -18,8 +18,8 @@ body {
 } */
 
 fieldset {
-    background-color: rgba(255, 255, 0, 0.3);
-    margin: auto;
+    background-color:  rgba(230, 207, 154, 0.4);;
+    /* margin: auto; */
 }
 
 #schereSteinPapier {
@@ -62,10 +62,11 @@ button:hover {
 
 #popup{
   background-color:  rgb(230, 207, 154);
-  position: absolute;
+  /* position: absolute;
   margin: 0 auto;
   top: 40%;
-  width: 600px;
+  width: 600px; */
+  /* left: 35%; */
 
 }
 

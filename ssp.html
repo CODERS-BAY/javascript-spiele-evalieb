@@ -19,15 +19,11 @@
                 <li><a href="index.html">CodeBreaker</a></li>
             </ul>
         </nav>
-    </div> 
-    <div id="popup" class="row screen hidden">
-        <h3 id="popupH3"></h3>
-        <button onclick="closePopUp()">OK</button>
-    </div> -->
+    </div>  -->
 
     <div class="container" id="cont">
-        <fieldset>
-            <legend>Besieg den Computer</legend>
+        <!-- <fieldset>
+            <legend>Besieg den Computer</legend> -->
             <div class="row">
                 <div class="col-12">
                     <header>
@@ -50,6 +46,13 @@
                     <!-- Sie haben noch <p id="try" name="try"></p> Versuche!  -->
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12 hidden" id="popup" >
+                <h3 id="popupH3"></h3>
+                <button onclick="closePopUp()">OK</button>
+                </div>
+            </div>
+        
             <!-- <div class="row" >
                 <div class="col-12" id="playAgain">
                     Viel Glück!
@@ -76,21 +79,23 @@
             </div>
 
             <div class="row firstHidden" id="sspGame">
-                <div class="col-4" >
+                <div class="col-3"></div>
+                <div class="col-2" >
                     <div id="scissor">
                         <img onclick="userScissor()" class="element" name="scissor" src="img/scissoor.png">
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <div id="crystal">
                         <img onclick="userCrystal()" class="element" name="crystal" src="img/crystal.png">
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                     <div id="paper">
                         <img onclick="userPaper()" class="element" name="paper" src="img/paper.png">
                     </div>
                 </div>
+                <div class="col-3"></div>
             </div>
             <div class="row">
                 <div class="col-12 firsthidden">
@@ -98,8 +103,8 @@
                 </div>
             </div>
 
-    </fieldset>
-</div>
+        <!-- </fieldset>
+    </div> -->
 
     <script type="text/javascript" src="js/scriptSSP.js"></script>
 
