@@ -1,0 +1,17 @@
+body{
+    background-image: url('../img/frontGTN.jpg');
+    color: lawngreen;
+}
+
+button{
+    background-color: lawngreen; 
+    color: black;
+    padding: 20px;
+    border-radius: 1rem 0;  
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    /* color: rgb(200, 220, 243);     */
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styleGTN.css">
+        <title>Zahlen Raten</title>
+
+    </head>
+<body>
+    <div id="start">
+        <nav>
+            <ul>
+                <li><a href="handyWW.html">Handyweitwurf</a></li>
+                <li><a href="ssp.html">Schere Stein Papier</a></li>
+                <li><a href="guessTheNumber.html">Zahlenraten</a></li>
+                <li><a href="index.html">Code Breaker</a></li>
+            </ul>
+        </nav>
+    </div> 
+
+    <div class="container" id="cont">
+        <fieldset>
+            <legend>Errate die richtige Zahl</legend>
+            <div class="row">
+                <div class="col-12">
+                    <header>
+                        <h1>Zahlen Raten</h1>    
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end noChangeA" id="limit">
+                    <label id="labelUL" for="upperLimit">Hier kannst du das obere Limit eingeben:</label>
+                </div>
+                <div class="col-6 flex-start" id="uL">
+                    <input id="upperLimit" name="upperLimit" type="number" min="1">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end noChangeA" id="rounds" >
+                    <label for="counter">Wieviele Runden möchtest du maximal Raten?</label>
+                </div>
+                <div class="col-6 flex-start" id="ct">
+                    <input id="counter" name="counter" type="number" min="1" max="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end" id="youGuess>">
+                    <label for="guessNumber">Gib Deine Zahl hier ein: </label>
+                </div>
+                <div class="col-6 flex-start">
+                    <input id="guessNumber" name="guessNumber" type="number" min="1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="spielstand">
+                    Viel Glück!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" id="button1">
+                    <button onclick="setTheLimit(); guessTheNumber()">Los geht's!</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12  firstHidden" id="button2">
+                    <button onclick="guessTheNumber()">Nochmal raten</button>
+                </div>
+            </div>
+            <div class="row firstHidden" id="myGuess">
+                <div class="col-4" >
+                    <div id="guess">
+                       <h3>Runde</h3>
+                    </div>
+                </div>
+                <div class="col-4" >
+                    <div id="numberGuess">
+                       <h3>Deine Zahl: </h3>
+                    </div>
+                </div>
+                <div class="col-4" >
+                    <div id="direction">
+                       <h3>Die gesuchte Zahl ist  </h3>
+                    </div>
+                </div>
+
+            </div>
+           <div class="row">
+                <div class="col-12 longHidden">
+                    <div id="randomNumberPC"></div>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+    </div>
+    <script type="text/javascript" src="js/scriptGTN.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styleSSP.css">
+        <title>Schere Stein Papier</title>
+
+    </head>
+<body>
+    <div id="start">
+        <nav>
+            <ul>
+                <li><a href="handyWW.html">Handyweitwurf</a></li>
+                <li><a href="ssp.html">Schere Stein Papier</a></li>
+                <li><a href="guessTheNumber.html">Zahlenraten</a></li>
+                <li><a href="index.html">Code Breaker</a></li>
+            </ul>
+        </nav>
+    </div> 
+
+    <div class="container" id="cont">
+        <!-- <fieldset>
+            <legend>Besieg den Computer</legend> -->
+            <div class="row">
+                <div class="col-12">
+                    <header>
+                        <h2>Schere Stein Papier</h2>    
+                    </header>
+                </div>
+            </div>
+            <div class="row" id="rounds">
+                <div class="col-6 flex-end" >
+                    <label for="wonRounds">Auf wieviel gewonnene Runden möchtest Du spielen?</label>
+                </div>
+                <div class="col-6 flex-start">
+                    <input id="wonRounds" name="wonRounds" type="number" min="1" max="10">
+                </div>
+            </div>
+            <div class="row">
+                    <!-- <img id="schereSteinPapier" src="img/sspfront.png">  -->
+
+                <div class="col-12 firstHidden">
+                    <!-- Sie haben noch <p id="try" name="try"></p> Versuche!  -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 hidden" id="popup" >
+                <h3 id="popupH3"></h3>
+                <button onclick="closePopUp()">OK</button>
+                </div>
+            </div>
+        
+            <!-- <div class="row" >
+                <div class="col-12" id="playAgain">
+                    Viel Glück!
+                </div>
+            </div> 
+            </div>-->
+            <div class="row">
+                <div class="col-12" id="spielstand">
+                    Viel Glück!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h3 id="uP" class="firstHidden">Deine gewonnen Runden: &nbsp</h3>
+                    <h3 id="userPoints" class="firstHidden"> 0</h3>
+                </div>
+                <div class="col-4">
+                    <button id="los" onclick="playSSP()">Los geht's!</button>
+                </div>
+                <div class="col-4">
+                    <h3 id="pP" class="firstHidden">Gewonnene Runden PC: &nbsp</h3>
+                    <h3 id="pcPoints" class="firstHidden"> 0</h3>
+                </div>
+            </div>
+
+            <div class="row firstHidden" id="sspGame">
+                <div class="col-4" >
+                    <div id="scissor">
+                        <img onclick="userScissor()" class="element" name="scissor" src="img/scissoor.png">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="crystal">
+                        <img onclick="userCrystal()" class="element" name="crystal" src="img/crystal.png">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div id="paper">
+                        <img onclick="userPaper()" class="element" name="paper" src="img/paper.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 firsthidden">
+                    <div id="spielstand"></div>
+                </div>
+            </div>
+
+        <!-- </fieldset>
+    </div> -->
+
+    <script type="text/javascript" src="js/scriptSSP.js"></script>
+
+
+</body>
+</html>

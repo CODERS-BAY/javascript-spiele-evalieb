@@ -1,0 +1,78 @@
+body {
+  background-image: url("../img/sky.jpg");
+  font-size: large;
+  max-height: 100vh;
+  background-position: center; 
+
+  /* background-color: antiquewhite; */
+}
+
+#cont {
+  background-size: 70%;
+  background-position: center;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+}
+
+fieldset {
+    background-color:  rgba(230, 207, 154, 0.4);;
+    /* margin: auto; */
+}
+
+#schereSteinPapier {
+  height: 50vh;
+}
+
+#paper,
+#scissor,
+#crystal {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* padding: 40%;  */
+  max-width: 40vh;
+  transition: width 2s;
+}
+
+#paper:hover,
+#scissor:hover,
+#crystal:hover {
+  width: 100vh;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 120px;
+  background-color: rgb(7, 131, 255);
+  color: rgb(230, 207, 154);
+  padding: 20px;
+  border-radius: 1rem;
+  border-color: rgb(230, 207, 154);
+  box-shadow: 1px 1px 2px rgb(230, 207, 154);
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  /* color: rgb(200, 220, 243);     */
+}
+
+#popup{
+  background-color:  rgb(230, 207, 154);
+  position: absolute;
+  margin: 0 auto;
+  top: 40%;
+  width: 600px;
+
+}
+
+.screen {
+  background-color: #fff;
+  box-shadow: 1px 1px 10px #777;
+  padding: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}

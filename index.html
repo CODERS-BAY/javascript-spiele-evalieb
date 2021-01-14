@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/grid.css">
+        <link rel="stylesheet" href="css/styleCB.css">
+        <title>Code Breaker</title>
+
+    </head>
+<body>
+    <div id="start">
+        <nav>
+            <ul>
+                <li><a href="handyWW.html">Handyweitwurf</a></li>
+                <li><a href="ssp.html">Schere Stein Papier</a></li>
+                <li><a href="guessTheNumber.html">Zahlenraten</a></li>
+                <li><a href="index.html">Code Breaker</a></li>
+            </ul>
+        </nav>
+    </div> 
+
+    <div class="container" id="cont">
+        <fieldset>
+            <legend>Knack' den Code</legend>
+            <div class="row">
+                <div class="col-12">
+                    <header>
+                        <h1>Code Breaker</h1>    
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end noChangeA" id="rounds" >
+                    <label for="counter">Wieviele Runden möchtest du raten?(maximal 12 erlaubt)</label>
+                </div>
+                <div class="col-6 flex-start" id="tryings">
+                    <input id="counter" name="counter" type="number" min="1" max="12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 flex-end" id="youGuess>">
+                    <label for="guessNumber">Gib Deine Zahl hier ein: </label>
+                </div>
+                <div class="col-6 flex-start">
+                    <input id="guessNumber" name="guessNumber" type="number" min="111" max="999">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12" id="spielstand">
+                    Viel Glück!
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" id="button">
+                    <button onclick="guessThe3DigiNumber()">Los geht's!</button>
+                </div>
+            </div>   
+            <div class="col-12 firstHidden" id="button2"></div>         
+            <div class="row">
+                <div class="col-12">
+                    <div id="result"></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-12  firstHidden" id="button2">
+                    <button onclick="guessThe3DigiNumber()">Nochmal raten</button>
+                </div>
+            </div>
+           <div class="row">
+                <div class="col-12 longHidden">
+                    <div id="randomNumberPC"></div>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+    </div>
+    <script type="text/javascript" src="js/scriptCB.js"></script>
+
+
+</body>
+</html>
